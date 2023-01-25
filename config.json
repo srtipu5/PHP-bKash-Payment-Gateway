@@ -1,9 +1,9 @@
 {
 
-"base_url" : "https://tokenized.pay.bka.sh/v1.2.0-beta/tokenized",
-"username" : "01558420696",
-"password" : "e7F6^iL?4)(",
-"app_key" : "mp0wYuZ6wSXQsW7YiVJndeDPtc",
-"app_secret" : "fMfbvxpM9mEOsPEGgaGfJ2Sy8jP1ZZ79R79HpW4xWjDGPyWSDcbn"
+"base_url" : "https://tokenized.sandbox.bka.sh/v1.2.0-beta/tokenized",
+"username" : "sandboxTokenizedUser02",
+"password" : "sandboxTokenizedUser02@12345",
+"app_key" : "4f6o0cjiki2rfm34kfdadl1eqq",
+"app_secret" : "2is7hdktrekvrbljjh44ll3d9l1dtjo4pasmjvs5vl5qr3fug4b"
 
 }
