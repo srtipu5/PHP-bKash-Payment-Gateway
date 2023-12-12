@@ -12,7 +12,7 @@
         $post_token = array(
             'mode' => '0011',
             'amount' => $_POST['amount'] ? $_POST['amount'] : 1,
-            'payerReference' => " ",
+            'payerReference' => $_POST['payerReference'] ? $_POST['payerReference'] : "1",
             'callbackURL' => "http://" . $_SERVER['SERVER_NAME']."/".basename(__DIR__)."/callback.php", // Your callback URL
             'currency' => 'BDT',
             'intent' => 'sale',
