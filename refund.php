@@ -8,7 +8,6 @@
          
             function refund()
             {        
-                getToken();
                 global $credentials_arr;
                 $post_token = array(
                     'paymentID' => $_POST['paymentID'],
@@ -22,7 +21,7 @@
                 $post_token = json_encode($post_token);
                 $header = array(
                     'Content-Type:application/json',
-                    'Authorization:'. $_SESSION["token"],
+                    'Authorization:'. getToken(),
                     'X-APP-Key:'. $credentials_arr['app_key']
                 );
         
