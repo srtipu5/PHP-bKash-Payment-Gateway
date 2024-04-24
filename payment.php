@@ -7,7 +7,6 @@
     
     function create()
     {       
-        getToken();
         global $credentials_arr;
         $post_token = array(
             'mode' => '0011',
@@ -16,14 +15,14 @@
             'callbackURL' => "http://" . $_SERVER['SERVER_NAME']."/".basename(__DIR__)."/callback.php", // Your callback URL
             'currency' => 'BDT',
             'intent' => 'sale',
-            'merchantInvoiceNumber' => 'Inv'.rand()
+            'merchantInvoiceNumber' => 'Inv'.rand() // Your can pass here any unique value
         );
 
         $url = curl_init($credentials_arr['base_url']."/checkout/create");
         $post_token = json_encode($post_token);
         $header = array(
             'Content-Type:application/json',
-            'Authorization:'. $_SESSION["token"],
+            'Authorization:'. getToken(),
             'X-APP-Key:'. $credentials_arr['app_key']
         );
 
