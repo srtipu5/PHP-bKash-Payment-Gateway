@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $credentials_json = file_get_contents('config.json'); 
 $credentials_arr = json_decode($credentials_json,true);
 
@@ -30,9 +28,7 @@ function getToken()
     curl_close($url);
         
     $response = json_decode($result_data, true);
-
-    $_SESSION["token"] = $response['id_token'];
-
+    
     return $response['id_token'];
 }
 
