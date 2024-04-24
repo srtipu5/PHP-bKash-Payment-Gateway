@@ -1,7 +1,5 @@
 <?php
-
-session_start();
-
+include 'token.php'; 
 $credentials_json = file_get_contents('config.json'); 
 $credentials_arr = json_decode($credentials_json,true);
 
@@ -17,7 +15,7 @@ function execute($paymentID)
     $post_token = json_encode($post_token);
     $header = array(
         'Content-Type:application/json',
-        'Authorization:'. $_SESSION["token"],
+        'Authorization:'. getToken(),
         'X-APP-Key:'.$credentials_arr['app_key']
     );
     
